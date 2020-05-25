@@ -4,7 +4,7 @@ body {
   background: #F5F5F5;
 }
 
-button:focus{
+button:focus {
   outline: 0;
 }
 
@@ -59,34 +59,35 @@ span {
 }
 
 /*------------ DASHBOARD ------------*/
-.dashboard-wrapper{
-  padding: 60px 80px ;
+.dashboard-wrapper {
+  padding: 60px 80px;
   width: 100%;
 }
-.dashboard{
+
+.dashboard {
   display: grid;
   width: 100%;
   max-width: 1800px;
-  grid-template-columns: .8fr 830px 2fr .8fr;
+  grid-template-columns: .8fr 870px 1fr .8fr;
   grid-template-rows: 100px 175px 1fr;
   grid-template-areas:
-   'dt dt nf bt'
-   'dd1 crd hrz-grph hrz-grph'
-   'dd2 areaGrph vrtGrph vrtGrph';
-   grid-gap: 10px;
+    'dt dt nf bt'
+    'dd1 crd hrz-grph hrz-grph'
+    'dd2 areaGrph vrtGrph vrtGrph';
+  grid-gap: 10px;
 }
 
 /* dashboard-title */
-.dashboard-title{
+.dashboard-title {
   font-weight: 600;
-font-size: 36px;
-line-height: 36px;
-color: #B4B4BD;
-grid-area: dt;
+  font-size: 36px;
+  line-height: 36px;
+  color: #B4B4BD;
+  grid-area: dt;
 }
 
 /* notification-button */
-.notification{
+.notification {
   width: 50px;
   height: 50px;
   border-radius: 100%;
@@ -98,16 +99,19 @@ grid-area: dt;
   justify-self: end;
   margin-right: 20px;
 }
-.notification:hover{
+
+.notification:hover {
   cursor: pointer;
 }
-.icon{
+
+.icon {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.marker{
+
+.marker {
   position: absolute;
   width: 22px;
   height: 22px;
@@ -118,21 +122,22 @@ grid-area: dt;
   right: -3px;
   top: 0px;
 }
-.marker p{
-    font-size: 0.9rem;
-    color: #fff;
-    position: absolute;
-    top:45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+.marker p {
+  font-size: 0.9rem;
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* assign button */
 button.assign-btn {
   width: 164px;
-height: 50px;
-border-radius: 12px !important;
-grid-area: bt;
+  height: 50px;
+  border-radius: 12px !important;
+  grid-area: bt;
 }
 
 /* dropdowns */
@@ -141,18 +146,18 @@ grid-area: bt;
   display: inline-block;
 }
 
-.dropdown .dropdown-menu{
-  width: 150px;
+.dropdown .dropdown-menu {
+  width: 140px;
 }
 
 .dropbtn {
-  background-color:#DCDCE0;
+  background-color: #DCDCE0;
   color: #696974;
-  width: 150px;
-height: 40px;
-border-radius: 6px;
-font-weight: 500;
-line-height: 16px;
+  width: 140px;
+  height: 40px;
+  border-radius: 6px;
+  font-weight: 500;
+  line-height: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -161,82 +166,201 @@ line-height: 16px;
   display: grid;
   grid-template-columns: 90% 10%;
 }
-.dropbtn p,.dropbtn svg{
+
+.dropbtn p, .dropbtn svg {
   align-self: center;
 }
-.dropbtn p{
+
+.dropbtn p {
   margin: 0;
+  color: #696974;
 }
 
-.dropdown:hover #myDropdown{
+.dropdown:hover #myDropdown {
   display: block;
 }
 
-.dropdown:hover .dropbtn{
+.dropdown:hover .dropbtn {
   border-radius: 6px 6px 0 0;
 }
 
-.dropdown:hover .dropbtn svg{
+.dropdown:hover .dropbtn svg {
   transform: rotate(180deg);
-    transition: 0.2s;
+  transition: 0.2s;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color:#DCDCE0;
-  width: 150px;
+  background-color: #DCDCE0;
+  width: 140px;
   z-index: 1;
-
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+  color: #696974;
+  padding: 10px 16px;
   text-decoration: none;
   display: block;
-      transition: 0.2s;
+  transition: 0.2s;
 }
 
 .dropdown-content a:hover {
   background-color: #fff
 }
 
+.dropdown-period {
+  font-size: 13px;
+  line-height: 20px;
+  color: #B4B4BD;
+  margin-top: 10px;
+}
 
-.cards{
+/* cards */
+.cards {
   text-align: center;
   grid-area: crd;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
   grid-column-gap: 10px;
-}
-.card{
-width: 200px;
-height: 175px;
-border-radius: 12px;
+  margin-left: 40px;
 }
 
-.horizontal-graph{
+.card {
+  width: 200px;
+  height: 175px;
+  border-radius: 12px;
+}
+
+.data {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 36px;
+  color: #0E2F5B;
+  margin-top: 68.5px;
+}
+
+.data-name {
+  margin-top: 10px;
+}
+
+.card-1 .data-name {
+  font-size: 16px;
+  line-height: 36px;
+  color: #B4B4BD;
+}
+
+.card-2 .data-name {
+  font-size: 16px;
+  line-height: 36px;
+  color: #FFA8A0;
+}
+
+.card-3 .data-name {
+  font-size: 16px;
+  line-height: 36px;
+  color: #FFD180;
+}
+
+.card-4 .data-name {
+  font-size: 16px;
+  line-height: 36px;
+  color: #8FDCE5;
+}
+
+/* horizontal-graph */
+.horizontal-graph {
   width: 100%;
   max-width: 500px;
   height: 175px;
   background: #fff;
   border-radius: 12px;
   grid-area: hrz-grph;
+  text-align: center;
 }
-.area-graph{
+
+.horizontal-graph .container {
+  height: 17px;
+  width: 90%;
+  position: relative;
+  border-radius: 16px;
+  background-color: #F1F1F5;
+  margin-top: 80px;
+  padding: 0;
+}
+
+.hr-graph {
+  height: 17px;
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 16px;
+}
+
+.h-graph-red {
+  width: 70%;
+  background: #FFA8A0;
+}
+
+.h-graph-yellow {
+  width: 40%;
+  background: #FFD180;
+}
+
+.h-graph-green {
+  width: 20%;
+  background: #8FDCE5;
+}
+
+/* area graph */
+.area-graph {
   grid-area: areaGrph;
-  width: 100%;
-  height: 340px;
+  width: calc(100%-40px);
+  height: 380px;
   background: #fff;
   border-radius: 12px;
+  margin-left: 40px;
 }
-.bar-graph{
+
+.area-graph .graph {
+  width: 830px;
+  height: 320px;
+  padding: 20px;
+}
+
+.checkboxes {
+  width: 100%;
+  text-align: center;
+  margin: 20px 20px 20px 0;
+}
+
+.custom-checkbox {
+  margin: 0 30px;
+}
+
+.custom-control-input {
+  border-radius: 0 !important;
+  border: 2px solid #B4B4BD !important;
+}
+
+.custom-control-label {
+  font-size: 16px;
+  color: #696974;
+  margin-left: 20px;
+}
+
+.custom-control-label::before {
+  border-radius: 0 !important;
+  border: 2px solid #B4B4BD !important;
+  box-shadow: none !important;
+}
+
+.bar-graph {
   grid-area: vrtGrph;
   width: 100%;
   max-width: 500px;
-  height: 340px;
+  height: 380px;
   background: #fff;
   border-radius: 12px;
 }
+
 /* dropdowns */
