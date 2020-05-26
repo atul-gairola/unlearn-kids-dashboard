@@ -17,6 +17,8 @@
 </head>
 
 <body>
+
+  <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark ">
     <a class="brand-name" href="#">
       <svg class="bi bi-circle-fill" width="48px" height="48px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -31,43 +33,45 @@
       <li class="nav-item"><a href="#" class="nav-link nav-content">Framework</a></li>
       <li class="nav-item"><a href="#" class="nav-link nav-content">Users</a></li>
       <li><a href="#" class="  login-logo">
-          <svg class="bi bi-person-circle" width="48px" height="48px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-            <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" fill="#B4B4BD" clip-rule="evenodd"
+              d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5ZM6 15.98C7.29 17.92 9.5 19.2 12 19.2C14.5 19.2 16.71 17.92 18 15.98C17.97 13.99 13.99 12.9 12 12.9C10 12.9 6.03 13.99 6 15.98Z"
+              fill="#696974" />
           </svg>
         </a></li>
     </ul>
   </nav>
 
-
+  <!-- Dashboard Section -->
   <section class="dashboard-wrapper">
 
     <div class="dashboard">
-
+      <!-- Dasboard title bar -->
       <p class="dashboard-title">My Dashboard</p>
-      <div class="notification">
-        <div class="icon">
-          <svg class="bi bi-bell" width="1.4em" height="1.4em" viewBox="0 0 16 16" fill="#2F80ED" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z" />
-            <path fill-rule="evenodd"
-              d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
-          </svg>
+      <div class="assign">
+        <div class="notification">
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#0069D9"
+                d="M19.125 18H18.5625V10.0312C18.5625 6.72422 16.118 3.99141 12.9375 3.53672V2.625C12.9375 2.10703 12.518 1.6875 12 1.6875C11.482 1.6875 11.0625 2.10703 11.0625 2.625V3.53672C7.88203 3.99141 5.4375 6.72422 5.4375 10.0312V18H4.875C4.46016 18 4.125 18.3352 4.125 18.75V19.5C4.125 19.6031 4.20937 19.6875 4.3125 19.6875H9.375C9.375 21.1359 10.5516 22.3125 12 22.3125C13.4484 22.3125 14.625 21.1359 14.625 19.6875H19.6875C19.7906 19.6875 19.875 19.6031 19.875 19.5V18.75C19.875 18.3352 19.5398 18 19.125 18ZM12 20.8125C11.3789 20.8125 10.875 20.3086 10.875 19.6875H13.125C13.125 20.3086 12.6211 20.8125 12 20.8125ZM7.125 18V10.0312C7.125 8.72813 7.63125 7.50469 8.55234 6.58359C9.47344 5.6625 10.6969 5.15625 12 5.15625C13.3031 5.15625 14.5266 5.6625 15.4477 6.58359C16.3687 7.50469 16.875 8.72813 16.875 10.0312V18H7.125Z"
+                fill="#696974" />
+            </svg>
+          </div>
+          <div class="marker">
+            <p>8</p>
+          </div>
         </div>
-        <div class="marker">
-          <p>8</p>
-        </div>
+        <button type="button" class="btn btn-primary assign-btn">+ Assign new</button>
       </div>
-      <button type="button" class="btn btn-primary assign-btn">+ Assign new</button>
 
-
+      <!-- Dropdown -->
       <div class="dropdown-div">
         <div class="dropdown">
           <button class="dropbtn">
             <p>This week</p>
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 292.362 292.362" style="enable-background:new 0 0 292.362 292.362;"
               xml:space="preserve">
-              <path d="M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424
+              <path fill="#696974" d="M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424
           		C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428
           		s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z" />
             </svg>
@@ -81,6 +85,7 @@
         <p class="dropdown-period">12 May 20 - 18 May 20</p>
       </div>
 
+      <!-- Cards Section -->
       <div class="cards">
         <div class="card card-1">
           <p class="data">268</p>
@@ -100,19 +105,21 @@
         </div>
       </div>
 
+      <!-- Horizonatal Graph -->
       <div class="horizontal-graph">
         <div class="graph">
           <canvas id="horizontalBarChart"></canvas>
         </div>
       </div>
 
+      <!-- Dropdown -->
       <div class="dropdown-div">
         <div class="dropdown">
           <button class="dropbtn">
             <p>This week</p>
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 292.362 292.362" style="enable-background:new 0 0 292.362 292.362;"
               xml:space="preserve">
-              <path d="M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424
+              <path fill="#696974" d="M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424
               C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428
               s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z" />
             </svg>
@@ -126,43 +133,45 @@
         <p class="dropdown-period">12 May 20 - 18 May 20</p>
       </div>
 
+      <!-- Area Graph -->
       <div class="area-graph">
         <div class="graph">
           <canvas id="areaChart"></canvas>
         </div>
         <div class="checkboxes">
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input type="checkbox" id="customCheckboxInline1" name="customCheckboxInline1" class="custom-control-input">
+            <input type="checkbox" id="customCheckboxInline1" name="customCheckboxInline1" class="custom-control-input checkbox-area-graph">
             <label class="custom-control-label" for="customCheckboxInline1">Assigned</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input type="checkbox" id="customCheckboxInline2" name="customCheckboxInline2" class="custom-control-input">
+            <input type="checkbox" id="customCheckboxInline2" name="customCheckboxInline2" class="custom-control-input checkbox-area-graph">
             <label class="custom-control-label" for="customCheckboxInline2">Created</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input type="checkbox" id="customCheckboxInline3" name="customCheckboxInline3" class="custom-control-input">
+            <input type="checkbox" id="customCheckboxInline3" name="customCheckboxInline3" class="custom-control-input checkbox-area-graph">
             <label class="custom-control-label" for="customCheckboxInline3">Reviewed</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input type="checkbox" id="customCheckboxInline4" name="customCheckboxInline4" class="custom-control-input">
+            <input type="checkbox" id="customCheckboxInline4" name="customCheckboxInline4" class="custom-control-input checkbox-area-graph">
             <label class="custom-control-label" for="customCheckboxInline4">Published</label>
           </div>
         </div>
       </div>
 
+      <!-- Vertical Bar Graph -->
       <div class="bar-graph">
         <div class="graph">
           <canvas id="barChart"></canvas>
         </div>
         <div class="radios">
           <div class="custom-control custom-radio custom-control-inline">
-            <input type="checkbox" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline1">Creators</label>
-          </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="checkbox" id="customRadioInline2" name="customRadioInline2" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline2">Reviewers</label>
-          </div>
+  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline1">Creators</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline2">Reviewers</label>
+</div>
         </div>
       </div>
     </div>

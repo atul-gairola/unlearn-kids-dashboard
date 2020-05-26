@@ -75,8 +75,8 @@ var myChart = new Chart(ctx, {
     },
     legend: {
       display: false
-    }
-  }
+    },
+  },
 });
 
 // HORIZONTAL BAR GRAPH
@@ -87,26 +87,34 @@ var stackedBarHorizontal = new Chart(ctxHorizontalBar, {
       labels: ['Mark'],
       datasets: [
         {
-       barThickness: 16,
+       barThickness: 18,
        backgroundColor: '#8FDCE5',
+      borderColor: "#fff",
+      borderWidth: 3,
        minBarLength: 2,
        data: [200],
      },
       {
-     barThickness: 16,
+     barThickness: 18,
      backgroundColor: '#FFD180',
+     borderColor: "#fff",
+     borderWidth: 3,
      minBarLength: 2,
      data: [350],
    },
    {
-  barThickness: 16,
+  barThickness: 18,
   backgroundColor: '#FFA8A0',
+  borderColor: "#fff",
+  borderWidth: 3,
   minBarLength: 2,
   data: [[40,480]],
 },
 {
-barThickness: 16,
+barThickness: 18,
 backgroundColor: '#F1F1F5',
+borderColor: "#fff",
+borderWidth: 3,
 minBarLength: 2,
 data: [600],
 }
@@ -115,6 +123,9 @@ data: [600],
     options: {
       responsive: true,
       cornerRadius: 30,
+      tooltips: {
+        enabled: false
+      },
       maintainAspectRatio: false,
         scales: {
             xAxes: [{
@@ -150,7 +161,6 @@ var stackedBar = new Chart(ctxBar, {
         {
         barPercentage: 0.5,
        barThickness: 16,
-       // maxBarThickness: 8,
        backgroundColor: '#FFA8A0',
        minBarLength: 2,
        data: [[40,250], [40,400], [40,380], [40,200], [40,290]],
@@ -172,6 +182,9 @@ var stackedBar = new Chart(ctxBar, {
       responsive: true,
           cornerRadius: 30,
       maintainAspectRatio: false,
+      tooltips: {
+        enabled: false
+      },
         scales: {
             xAxes: [{
                 stacked: true,

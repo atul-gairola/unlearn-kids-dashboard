@@ -10,12 +10,12 @@ button:focus {
 
 /*------------ NAVBAR ------------*/
 nav {
-  height: 100px;
+  height: 80px;
   background-color: #696974;
 }
 
 nav svg {
-  color: #C4C4C4;
+  fill: #C4C4C4;
 }
 
 .brand-name {
@@ -38,10 +38,6 @@ nav svg {
   margin-top: 0px;
 }
 
-.nav-link:hover {
-  color: blue;
-}
-
 .nav-item {
   margin-right: 30px;
 }
@@ -50,7 +46,7 @@ nav svg {
   margin: 5px 0;
 }
 
-.login-logo svg:hover {
+.login-logo svg:hover path{
   fill: #fff;
 }
 
@@ -62,6 +58,7 @@ span {
 .dashboard-wrapper {
   padding: 60px 80px;
   width: 100%;
+  max-width: 1800px;
 }
 
 .dashboard {
@@ -71,7 +68,7 @@ span {
   grid-template-columns: .8fr 870px 1fr .8fr;
   grid-template-rows: 100px 175px 1fr;
   grid-template-areas:
-    'dt dt nf bt'
+    'dt dt dt-2 dt-2'
     'dd1 crd hrz-grph hrz-grph'
     'dd2 areaGrph vrtGrph vrtGrph';
   grid-gap: 10px;
@@ -81,9 +78,17 @@ span {
 .dashboard-title {
   font-weight: 600;
   font-size: 36px;
-  line-height: 36px;
   color: #B4B4BD;
   grid-area: dt;
+}
+
+.assign{
+    grid-area: dt-2;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 250px;
 }
 
 /* notification-button */
@@ -95,13 +100,12 @@ span {
   border: 1px solid #696974;
   position: relative;
   margin-left: 0px;
-  grid-area: nf;
-  justify-self: end;
-  margin-right: 20px;
+  transition: 0.2s
 }
 
 .notification:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 .icon {
@@ -137,7 +141,6 @@ button.assign-btn {
   width: 164px;
   height: 50px;
   border-radius: 12px !important;
-  grid-area: bt;
 }
 
 /* dropdowns */
@@ -157,7 +160,6 @@ button.assign-btn {
   height: 40px;
   border-radius: 6px;
   font-weight: 500;
-  line-height: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -205,11 +207,14 @@ button.assign-btn {
   padding: 10px 16px;
   text-decoration: none;
   display: block;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .dropdown-content a:hover {
   background-color: #fff
+}
+.dropdown-content a:active{
+  background-color: #696974;
 }
 
 .dropdown-period {
@@ -233,6 +238,10 @@ button.assign-btn {
   width: 200px;
   height: 175px;
   border-radius: 12px;
+  transition: 0.5s;
+}
+.card:hover{
+transform: scale(1.05);
 }
 
 .data {
@@ -313,6 +322,10 @@ transform: translate(-50%, -45%);
   margin: 10px 20px 20px 0;
 }
 
+.custom-control-input:focus{
+  border-color:  none !important;
+}
+
 .custom-checkbox {
   margin: 0 30px 0 0;
 }
@@ -363,4 +376,9 @@ transform: translateX(-52%);
 }
 .custom-radio {
   margin: 0 10px 0 0;
+}
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+  background-image: url('icons/radio_rounded.svg');
+  background-color: #fff;
+  background-size: cover;
 }
