@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <!-- Chart JS cdn -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <!-- CDN for rounded charts -->
+  <script type="text/javascript" charset="utf-8" src="Chart.roundedBarCharts.min.js"></script>
 </head>
 
 <body>
@@ -36,12 +38,13 @@
           </svg>
         </a></li>
     </ul>
-
   </nav>
+
 
   <section class="dashboard-wrapper">
 
     <div class="dashboard">
+
       <p class="dashboard-title">My Dashboard</p>
       <div class="notification">
         <div class="icon">
@@ -56,6 +59,7 @@
         </div>
       </div>
       <button type="button" class="btn btn-primary assign-btn">+ Assign new</button>
+
 
       <div class="dropdown-div">
         <div class="dropdown">
@@ -94,14 +98,11 @@
           <p class="data">40</p>
           <p class="data-name">PUBLISHED</p>
         </div>
-
       </div>
 
       <div class="horizontal-graph">
-        <div class="container">
-          <div class="h-graph-red hr-graph"></div>
-          <div class="h-graph-yellow hr-graph"></div>
-          <div class="h-graph-green hr-graph"></div>
+        <div class="graph">
+          <canvas id="horizontalBarChart"></canvas>
         </div>
       </div>
 
@@ -131,56 +132,42 @@
         </div>
         <div class="checkboxes">
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input type="checkbox" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline1">Assigned</label>
+            <input type="checkbox" id="customCheckboxInline1" name="customCheckboxInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckboxInline1">Assigned</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input type="checkbox" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline2">Created</label>
+            <input type="checkbox" id="customCheckboxInline2" name="customCheckboxInline2" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckboxInline2">Created</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input type="checkbox" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline3">Reviewed</label>
+            <input type="checkbox" id="customCheckboxInline3" name="customCheckboxInline3" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckboxInline3">Reviewed</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input type="checkbox" id="customRadioInline4" name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline4">Published</label>
+            <input type="checkbox" id="customCheckboxInline4" name="customCheckboxInline4" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckboxInline4">Published</label>
           </div>
         </div>
       </div>
 
       <div class="bar-graph">
         <div class="graph">
-
+          <canvas id="barChart"></canvas>
         </div>
-        <div class="checkboxes">
-
-        </div>
-      </div>
-
-      <!-- <div class="dropdown-div">
-        <div class="dropdown">
-          <button class="dropbtn">
-            <p>This week</p>
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 292.362 292.362" style="enable-background:new 0 0 292.362 292.362;"
-              xml:space="preserve">
-              <path d="M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424
-              C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428
-              s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z" />
-            </svg>
-          </button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="#" class="dropdown-item">Today</a>
-            <a href="#" class="dropdown-item">This month</a>
-            <a href="#" class="dropdown-item">All time</a>
+        <div class="radios">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="checkbox" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline1">Creators</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="checkbox" id="customRadioInline2" name="customRadioInline2" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline2">Reviewers</label>
           </div>
         </div>
-        <p class="dropdown-period">12 May 20 - 18 May 20</p>
-      </div> -->
-
+      </div>
     </div>
-
   </section>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
